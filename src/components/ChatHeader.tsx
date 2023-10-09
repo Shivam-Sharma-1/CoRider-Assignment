@@ -12,7 +12,7 @@ function ChatHeader() {
             <Box display={"flex"} alignItems={"center"} justifyContent={"space-between"} w="100%">
                 <Box display="flex" alignItems="center" gap={10}>
                     <ArrowBackIcon w={24} h={24} cursor="pointer" />
-                    <Input value={inputValue} fontSize={24} variant="unstyled" border={"none"} w={200} bgColor="transparent" p={5} fontWeight={700} onChange={(e) => setInputValue(e.target.value)} isDisabled={!isEditing && true} />
+                    <Input value={inputValue} fontSize={24} variant="unstyled" border={"none"} w={200} bgColor="transparent" outline="none" p={5} fontWeight={700} onChange={(e) => setInputValue(e.target.value)} isDisabled={!isEditing && true} />
                 </Box>
                 <Box onClick={() => setIsEditing(!isEditing)} cursor="pointer">
                     {isEditing ?
