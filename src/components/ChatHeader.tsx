@@ -1,8 +1,7 @@
-import { EditablePreview, Box, useColorModeValue, IconButton, Input, useDisclosure, useEditableControls, ButtonGroup, SlideFade, Editable, Tooltip, EditableInput, Flex, Image, Heading, border } from "@chakra-ui/react";
-import { CheckIcon, ArrowBackIcon, CloseIcon, EditIcon } from "@chakra-ui/icons";
-import { useRef, useState } from "react";
-import KebabIcon from "./../../public/icons/kebab-icon.svg"
+import { useState } from "react";
 
+import { Box, Input, Image, Heading } from "@chakra-ui/react";
+import { CheckIcon, ArrowBackIcon, EditIcon } from "@chakra-ui/icons";
 
 function ChatHeader() {
     const [inputValue, setInputValue] = useState("Trip 1")
