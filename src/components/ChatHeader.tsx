@@ -8,7 +8,7 @@ function ChatHeader() {
     const [isEditing, setIsEditing] = useState(false)
 
     return (
-        <Box display={"flex"} flexDir="column" padding="14px" pb="16px" pt="50px" gap="14px" borderBottom="2px solid #E5E5E0">
+        <Box display={"flex"} flexDir="column" padding="14px" py="16px" gap="14px" borderBottom="2px solid #E5E5E0">
             <Box display={"flex"} alignItems={"center"} justifyContent={"space-between"} w="100%">
                 <Box display="flex" alignItems="center" gap={3}>
                     <ArrowBackIcon w="24px" h="24px" cursor="pointer" />
