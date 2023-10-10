@@ -15,7 +15,7 @@
             "purpose": "maskable any"
         }
     ],
-    "start_url": "/",
+    "start_url": "https://co-rider-assignment-shivam-sharma.vercel.app/index.html",
     "display": "fullscreen",
     "orientation": "portrait",
     "theme_color": "#000000",
