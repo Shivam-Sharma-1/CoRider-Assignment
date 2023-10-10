@@ -27,7 +27,7 @@ function ChatBox() {
             <Box display="flex" alignItems="center" justifyContent="space-between" gap="16px">
                 <Popover placement="top" >
                     <Portal>
-                        <PopoverContent w="124px" h="44px" borderRadius="1000px" boxShadow="0px -1px 8px 0px rgba(0, 0, 0, 0.05)" outline="none">
+                        <PopoverContent w="124px" h="44px" borderRadius="1000px" boxShadow="0px -1px 8px 0px rgba(0, 0, 0, 0.05)" outline="none" _disabled={{ outline: "none" }}>
                             <PopoverBody w="100%" h="100%" borderRadius="inherit" bgColor="rgba(0, 128, 0, 1)" boxShadow="0px -1px 8px 0px rgba(0, 0, 0, 0.05)" display="flex" gap="16px" alignItems="center" justifyContent="center">
 
                                 {buttonData.map((item) => (
