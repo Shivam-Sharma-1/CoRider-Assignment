@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ChatBubble from "./ChatBubble";
 import fetcher from "../utils/fetcher";
 import { Box } from "@chakra-ui/react";
@@ -17,35 +17,47 @@ interface ChatProps {
     time: string
 }
 
-interface ChatHistoryProps {
-    chats: ChatProps[],
-    from: string,
-    message: string,
-    name: string,
-    status: string,
-    to: string,
-}
-
 function ChatHistory() {
-    const [messages, setMessages] = useState<ChatHistoryProps>({ chats: [], from: "", message: "", name: "", status: "", to: "" })
+    const [messages, setMessages] = useState<ChatProps[]>([])
     const [isLoading, setIsLoading] = useState(false)
+    const [pageNo, setPageNo] = useState(0)
+    const [scrollOnce, setScrollOnce] = useState(false)
+    const observer = useRef<HTMLDivElement | null>(null)
+
+    function handleScroll() {
+        if (observer.current) {
+            if (observer.current.scrollTop <= 250) {
+                setPageNo((prevPageNo) => prevPageNo + 1)
+                observer.current.scrollTop = 400
+            }
+        }
+    }
+
+    function scrollBottom() {
+        if (observer.current && !scrollOnce) {
+            observer.current.scrollTop = observer.current.scrollHeight;
+            setScrollOnce(true)
+        }
+    }
 
     useEffect(() => {
-        const fetchData = async () => {
+        async function fetchData() {
             setIsLoading(true)
-            const data = await fetcher({ url: "https://qa.corider.in/assignment/chat?page=1" })
-            setMessages(data)
+            const data = await fetcher({ url: `https://qa.corider.in/assignment/chat?page=${pageNo}` })
+            setMessages((prevMessages) => [...data.chats, ...prevMessages])
             setIsLoading(false)
         }
         fetchData()
-    }, [])
+    }, [pageNo])
+
+    if (isLoading) return <div>Loading...</div>
 
     return (
-        <Box overflow="auto" h="70%">
-            {isLoading ? <h1>Loading</h1> : messages.chats.map((message) => (
-                <ChatBubble key={message.sender.user_id} self={message.sender.self} image={message.sender.image} />
+        <Box overflow="auto" h="70%" ref={observer} onScroll={handleScroll} onLoad={scrollBottom}>
+            {messages.map((chat) => (
+                <ChatBubble key={chat.id} self={chat.sender?.self} image={chat.sender?.image} message={chat.message} />
             ))}
-        </Box>
+        </Box >
     )
 }
 
