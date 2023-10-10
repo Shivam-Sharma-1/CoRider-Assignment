@@ -47,12 +47,12 @@ function ChatHeader() {
                         <Heading as="h4" fontSize="18px"><span style={{ color: "#606060", fontWeight: 600 }}>To </span>Sector 28</Heading>
                     </Box>
                 </Box>
-                <Popover>
+                <Popover placement="bottom-end">
                     <PopoverTrigger>
                         <Image src='icons/kebab-icon.svg' alt="kebab-icon" boxSize="24px" cursor="pointer" />
                     </PopoverTrigger>
                     <Portal>
-                        <PopoverContent w="156px" h="144px" borderRadius="8px" outline="none" right="40%" p={0}>
+                        <PopoverContent w="156px" h="144px" borderRadius="8px" outline="none" p={0}>
                             <PopoverBody w="100%" h="100%" borderRadius="inherit" p={0} display="flex" justifyContent="center" flexDir="column">
 
                                 {buttonData.map((item, index) => (
