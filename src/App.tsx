@@ -2,7 +2,6 @@ import './App.css';
 import { Box } from "@chakra-ui/react"
 import ChatHeader from './components/ChatHeader';
 import ChatBox from './components/ChatBox';
-import ChatBubble from './components/ChatBubble';
 import ChatHistory from './components/ChatHistory';
 
 function App() {
