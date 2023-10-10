@@ -1,7 +1,27 @@
 import { useState } from "react";
-
-import { Box, Input, Image, Heading } from "@chakra-ui/react";
+import { Box, Input, Image, Heading, Popover, PopoverTrigger, Portal, PopoverContent, PopoverBody, Text } from "@chakra-ui/react";
 import { CheckIcon, ArrowBackIcon, EditIcon } from "@chakra-ui/icons";
+
+const buttonData = [
+    {
+        id: 1,
+        icon: "/icons/members-icon.svg",
+        alt: "members-icon",
+        text: "Members"
+    },
+    {
+        id: 2,
+        icon: "/icons/call-icon.svg",
+        alt: "call-icon",
+        text: "Share Number"
+    },
+    {
+        id: 3,
+        icon: "/icons/report-message-icon.svg",
+        alt: "report-message-icon",
+        text: "Report"
+    }
+]
 
 function ChatHeader() {
     const [inputValue, setInputValue] = useState("Trip 1")
@@ -28,7 +48,25 @@ function ChatHeader() {
                         <Heading as="h4" fontSize="18px"><span style={{ color: "#606060", fontWeight: 600 }}>To </span>Sector 28</Heading>
                     </Box>
                 </Box>
-                <Image src='icons/kebab-icon.svg' alt="kebab-icon" boxSize="24px" cursor="pointer" />
+                <Popover>
+                    <PopoverTrigger>
+                        <Image src='icons/kebab-icon.svg' alt="kebab-icon" boxSize="24px" cursor="pointer" />
+                    </PopoverTrigger>
+                    <Portal>
+                        <PopoverContent w="156px" h="144px" borderRadius="8px" outline="none" right="40%" p={0}>
+                            <PopoverBody w="100%" h="100%" borderRadius="inherit" p={0} display="flex" justifyContent="center" flexDir="column">
+
+                                {buttonData.map((item, index) => (
+                                    <Box w="100%" h="48px" display="flex" alignItems="center" gap="12px" key={item.id} cursor="pointer" padding="7px 12px" borderColor="#E5E5E0" borderStyle="solid" borderWidth={index === 1 ? "0 1px 0 1px" : "1px"}>
+                                        <Image src={item.icon} alt={item.alt} w="20px" h="20px" color="#141E0D" bgColor="transparent" />
+                                        <Text fontSize="14px" color="#141E0D" fontWeight={600}>{item.text}</Text>
+                                    </Box>
+                                ))}
+
+                            </PopoverBody>
+                        </PopoverContent>
+                    </Portal>
+                </Popover>
             </Box>
         </Box >
     )
