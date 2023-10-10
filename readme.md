@@ -42,6 +42,8 @@ Chat Screen PWA is a Progressive Web Application developed with ReactJS that mim
 
 -   **Installable PWA:** The application can be installed on Android and iOS devices, just like any other PWA.
 
+-   **Custom Scrollbar:** Added a custom scrollbar which compliments the overall design.
+
 -   **Beautiful UI:** The UI is designed to match the UI designed by CoRider team.
 
 ## Technologies Used
