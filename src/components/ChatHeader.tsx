@@ -52,7 +52,7 @@ function ChatHeader() {
                         <Image src='icons/kebab-icon.svg' alt="kebab-icon" boxSize="24px" cursor="pointer" />
                     </PopoverTrigger>
                     <Portal>
-                        <PopoverContent w="156px" h="144px" borderRadius="8px" outline="none" p={0}>
+                        <PopoverContent w="156px" h="144px" borderRadius="8px" p={0} _focusVisible={{ outline: "none" }}>
                             <PopoverBody w="100%" h="100%" borderRadius="inherit" p={0} display="flex" justifyContent="center" flexDir="column">
 
                                 {buttonData.map((item, index) => (
