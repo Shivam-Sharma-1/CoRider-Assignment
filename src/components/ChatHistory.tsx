@@ -39,7 +39,7 @@ function ChatHistory() {
     }, [pageNo])
 
     return (
-        <Box id="scrollableDiv" overflow="auto" h="70%" display="flex" flexDir="column-reverse">
+        <Box id="scrollableDiv" overflow="auto" h="80%" display="flex" flexDir="column-reverse">
 
             <InfiniteScroll
                 dataLength={messages.length}
