@@ -13,8 +13,8 @@
 ## Table of Contents
 
 1. [Project Overview](#project-overview)
-2. [Features](#features)
-3. [Screenshots](#screenshots)
+2. [Screenshots](#screenshots)
+3. [Features](#features)
 4. [Technologies Used](#technologies-used)
 5. [Packages Used](#packages-used)
 6. [Getting Started](#getting-started)
