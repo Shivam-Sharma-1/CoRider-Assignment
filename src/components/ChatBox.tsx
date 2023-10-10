@@ -27,8 +27,8 @@ function ChatBox() {
             <Box display="flex" alignItems="center" justifyContent="space-between" gap={8}>
                 <Popover placement="top" >
                     <Portal>
-                        <PopoverContent w="124px" h="44px" borderRadius="1000px">
-                            <PopoverBody w="100%" h="100%" borderRadius="inherit" bgColor="rgba(0, 128, 0, 1)" boxShadow="box-shadow: 0px -1px 8px 0px rgba(0, 0, 0, 0.05)" display="flex" gap="16px" alignItems="center" justifyContent="center">
+                        <PopoverContent w="124px" h="44px" borderRadius="1000px" boxShadow="0px -1px 8px 0px rgba(0, 0, 0, 0.05)">
+                            <PopoverBody w="100%" h="100%" borderRadius="inherit" bgColor="rgba(0, 128, 0, 1)" boxShadow="0px -1px 8px 0px rgba(0, 0, 0, 0.05)" display="flex" gap="16px" alignItems="center" justifyContent="center">
 
                                 {buttonData.map((item) => (
                                     <Image src={item.icon} key={item.id} alt={item.alt} w="20px" h="20px" color="white" bgColor="transparent" cursor="pointer" />
