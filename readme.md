@@ -8,7 +8,7 @@
 
 -   Create a single-page PWA with a specific UI layout.
 -   Fetch chat data from the provided API.
--   Implement typical chat application behavior.
+-   Implement infinite scrolling of chats.
 
 ## Table of Contents
 
