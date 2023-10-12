@@ -32,7 +32,7 @@ function ChatHeader() {
             <Box display={"flex"} alignItems={"center"} justifyContent={"space-between"} w="100%">
                 <Box display="flex" alignItems="center" gap={3}>
                     <ArrowBackIcon w="24px" h="24px" cursor="pointer" />
-                    <Input value={inputValue} fontSize="24px" variant="unstyled" border={"none"} w={200} bgColor="transparent" outline="none" p="5px" fontWeight={700} onChange={(e) => setInputValue(e.target.value)} isDisabled={!isEditing && true} _disabled={{ color: "initial", outline: "none" }} />
+                    <Input value={inputValue} fontSize="24px" variant="unstyled" border={"none"} w="50%" bgColor="transparent" outline="none" p="5px" fontWeight={700} onChange={(e) => setInputValue(e.target.value)} isDisabled={!isEditing && true} _disabled={{ color: "initial", outline: "none" }} />
                 </Box>
                 <Box onClick={() => setIsEditing(!isEditing)} cursor="pointer">
                     {isEditing ?
