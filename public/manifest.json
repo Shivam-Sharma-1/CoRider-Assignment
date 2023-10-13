@@ -16,7 +16,7 @@
         }
     ],
     "start_url": "https://co-rider-assignment-shivam-sharma.vercel.app/",
-    "display": "fullscreen",
+    "display": "standalone",
     "orientation": "portrait",
     "theme_color": "#000000",
     "background_color": "#ffffff"
