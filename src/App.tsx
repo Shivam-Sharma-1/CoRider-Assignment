@@ -6,7 +6,7 @@ import ChatHistory from './components/ChatHistory';
 
 function App() {
     return (
-        <Box w="100%" h="100dvh" maxW={375} mx="auto" bgColor="#FAF9F4" display="flex" flexDir="column">
+        <Box w="100%" h="100dvh" mx="auto" bgColor="#FAF9F4" display="flex" flexDir="column">
             < ChatHeader />
             <ChatHistory />
             <ChatBox />

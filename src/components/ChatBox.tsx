@@ -22,7 +22,7 @@ const buttonData = [
 
 function ChatBox() {
     return (
-        <Box display="flex" alignItems="center" justifyContent="space-between" bgColor="white" px={5} py={2} w="100%" maxW={375}>
+        <Box display="flex" alignItems="center" justifyContent="space-between" bgColor="white" px={[5, "60px", "60px", "250px"]} py={2} w="100%">
             <Input placeholder="Reply to @Rahul Yadav" variant="unstyled" border="none" p={2} w="80%" outline="none" fontSize={14} />
             <Box display="flex" alignItems="center" justifyContent="space-between" gap="16px">
                 <Popover placement="top" >

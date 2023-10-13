@@ -39,8 +39,7 @@ function ChatHistory() {
     }, [pageNo])
 
     return (
-        <Box id="scrollableDiv" overflow="auto" h="80%" display="flex" flexDir="column-reverse">
-
+        <Box id="scrollableDiv" overflow="auto" h="80%" display="flex" flexDir="column-reverse" w="100%" px={[0, "60px", "60px", "250px"]}>
             <InfiniteScroll
                 dataLength={messages.length}
                 next={fetchMoreData}
@@ -54,7 +53,7 @@ function ChatHistory() {
                     margin="auto"
                     my={2}
                 />}
-                style={{ display: 'flex', flexDirection: 'column-reverse' }}
+                style={{ display: 'flex', flexDirection: 'column-reverse', width: "100%" }}
                 inverse={true}
                 scrollableTarget="scrollableDiv"
             >
